@@ -1,0 +1,21 @@
+{
+  "nom": "Reverb",
+  "sizeReverb": 2,
+  "dampReverb": 0.65,
+  "balReverb": 0.5,
+  "depthChorus": 0.5,
+  "feedbackChorus": 0.25,
+  "balChorus": 0.5,
+  "delayDelay": 0.3,
+  "feedbackDelay": 0.4,
+  "maxdelayDelay": 1,
+  "mulDelay": 0.5,
+  "tanspoHarmonizer": 7,
+  "driveDistortion": 0.8,
+  "slopeDistortion": 0.8,
+  "mulDistortion": 0.5,
+  "feedbackFlanger": 0.2,
+  "maxdelayFlanger": 0.01,
+  "freqLowpass": 1000,
+  "orderLowpass": 4
+}
