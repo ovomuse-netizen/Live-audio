@@ -9,6 +9,10 @@ from pyo import *
 from effets import Effets
 from ajuste import Ajust
 from ajuste2 import Ajust2
+from ajuste3 import Ajust3
+from ajuste4 import Ajust4
+
+
 
 
 
@@ -128,6 +132,12 @@ def selectionner():
          harmo = ef.Harmonizer()
        if res == 'Equaliseur':
          equa = ef.Equaliseur()
+       if res == 'Lowpass':
+         low = ef.Lowpass()
+
+
+
+
 
 
    showinfo(
@@ -159,6 +169,13 @@ def ajuste():
          disto = Ajust2.Distortion()
       if res == 'Flanger':
          flange = Ajust2.Flanger()
+      if res == 'Harmonizer':
+         harmo = Ajust3.Harmonizer()
+      if res == 'Lowpass':
+         low = Ajust3.Lowpass()
+      if res == 'Delay':
+         dela = Ajust4.Delay()
+
 
 root = tk.Tk()
 
