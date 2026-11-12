@@ -110,31 +110,70 @@ def handle_item_select(event):
     """
     return '{selected_languages}'
 
-def selectionner():
+def selectionner(reco="tuut"):
    entree = texte.get()
    ef = Effets()
    i=0
+   mix = ''
    result = entree.split(",")
    for res in result:
        i=i+1      
        if res == 'Reverb':
           reverbe = ef.Reverb()
-       
+          if str(mix) == "":
+            mix = reverbe
+          else :
+            mix = mix + reverbe
        if res == 'Delay':
           delay = ef.Delay()
+          if str(mix) == "":
+             mix = delay
+          else :
+             mix = mix + delay
        if res == 'Chorus':
          chorus = ef.Chorus()
+         if str(mix) == "":
+           mix = chorus
+         else : 
+           mix = mix + chorus
        if res == 'Distortion':
          disto = ef.Distortion()
+         if str(mix) == "":
+           mix = disto
+         else :
+          mix = mix + disto
        if res == 'Flanger':
          flange = ef.Flanger()
+         if str(mix) == "":
+          mix = flange
+         else : 
+          mix = mix + flange  
        if res == 'Harmonizer':
          harmo = ef.Harmonizer()
+         if str(mix) == "":
+          mix = harmo
+         else :
+          mix = mix + harmo
        if res == 'Equaliseur':
          equa = ef.Equaliseur()
+         if str(mix) == "":
+          mix = equa
+         else : 
+          mix = mix + equa
        if res == 'Lowpass':
          low = ef.Lowpass()
+         if str(mix) == "":
+          mix = low 
+         else : 
+          mix = mix + low
 
+       if reco == "reco" :
+            rec = Record(mix,          filename="son.wav",
+            fileformat=0,  # WAV
+            sampletype=0   # 16 bits
+             ) 
+       else :
+         mix.out()
 
 
 
@@ -203,10 +242,13 @@ showinfo(
         message=f'Pour Entry  {entree}'
     )
 """
-button = Button(root, text="Select!", command=selectionner)
+button = Button(root, text="Select!", command=lambda:selectionner("tuut"))
 button.pack()
 button2 = Button(root, text="Ajuster", command=ajuste)
 button2.pack()
+button3 = Button(root, text="Record", command=lambda:selectionner("reco"))
+button3.pack()
+
 
 #reverbe = Effets.Reverb(mic)   
 

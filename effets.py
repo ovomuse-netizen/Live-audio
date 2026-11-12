@@ -160,7 +160,8 @@ class Effets:
 
 
    source = self.mic
-   filtre = ButLP(source, freq=donnees["freqLowpass"] , order=donnees["orderLowpass"])
+   #filtre = ButLP(source, freq=donnees["freqLowpass"] , order=donnees["orderLowpass"])
+   filtre = ButLP(source, freq=donnees["freqLowpass"] )
 
    filtre.out()
 

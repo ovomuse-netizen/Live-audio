@@ -21,7 +21,7 @@ class Ajust2():
    def __init__(self):
         # Ces objets deviennent des attributs de cette instance
         self.server = Server( nchnls=1,sr=44100,buffersize=1024, duplex=1)
-        self.server.setOutputDevice(2)  
+        self.server.setOutputDevice(6)  
         self.server.boot()
         #s.start()
         self.server.start()
